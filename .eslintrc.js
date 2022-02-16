@@ -22,6 +22,7 @@ module.exports = {
   rules: {
     "prettier/prettier": "error", // prettier标记的地方抛出错误信息
     "no-async-promise-executor": "off", // 允许promise的立即执行函数使用async
-    "spaced-comment": [2, "always"] // 注释后面必须写两个空格
+    "spaced-comment": [2, "always"], // 注释后面必须写两个空格
+    "@typescript-eslint/no-explicit-any": ["off"] // 关闭any校验
   }
 };

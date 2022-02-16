@@ -11,16 +11,7 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
-      forbidNonWhitelisted: true,
-      exceptionFactory: (errors: ValidationError[]) => {
-        console.log(errors);
-        const propertyNotExist = [];
-        for (let i = 0; i < errors.length; i++) {
-          const errorMessage = "属性" + errors[i].property + "未定义";
-          propertyNotExist.push(errorMessage);
-        }
-        return new BadRequestException(propertyNotExist);
-      }
+      forbidNonWhitelisted: true
     })
   );
   await app.listen(3000);
