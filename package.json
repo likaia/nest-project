@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "build": "nest build --webpack --webpackPath=./webpack.config.js",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
@@ -33,12 +33,13 @@
     "tsconfig-paths": "^3.11.0",
     "tslib": "^2.3.0",
     "typescript": "^4.4.4",
-    "webpack": "5.0.0",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0"
+    "@typescript-eslint/parser": "^4.18.0",
+    "webpack": "^5.11.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.1"
   }
 }
