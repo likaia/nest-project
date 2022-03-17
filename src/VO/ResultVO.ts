@@ -1,6 +1,11 @@
+import { ApiProperty } from "@nestjs/swagger";
+
 export class ResultVO<T> {
+  @ApiProperty({ example: "0", description: "接口状态码", type: "number" })
   private code!: number;
+  @ApiProperty({ example: "接口调用成功", description: "调用状态" })
   private msg!: string;
+  @ApiProperty({ example: "{}", description: "成功时返回的数据" })
   private data!: T | null;
 
   public getCode(): number {
