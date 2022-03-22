@@ -5,7 +5,6 @@ export class ResultVO<T> {
   private code!: number;
   @ApiProperty({ example: "接口调用成功", description: "调用状态" })
   private msg!: string;
-  @ApiProperty({ example: "{}", description: "成功时返回的数据" })
   private data!: T | null;
 
   public getCode(): number {
