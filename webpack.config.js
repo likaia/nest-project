@@ -29,7 +29,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist")
   },
   resolve: {
-    extensions: [".js", ".ts", ".json"]
+    extensions: [".js", ".ts", ".json"],
+    alias: {
+      "@": path.resolve(__dirname, "./src")
+    }
   },
   plugins: [
     // 需要进行忽略的插件
